@@ -1,10 +1,9 @@
 provider "aws" {
   region = "us-west-2"
 }
-
-resource "aws_instance" "basic" {
-  ami           = "ami-0735e22e032b35e38"
-  instance_type = "t3.nano"
+  resource "aws_vpc" "main" {
+  cidr_block = "10.0.0.0/16"
+}
   tags = {
     Name = "tf-cloud"
    
