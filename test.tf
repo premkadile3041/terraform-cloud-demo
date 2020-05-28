@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-west-2"
+  region = "us-east-1"
 }
   resource "aws_vpc" "main" {
   cidr_block = "10.0.0.0/16"
@@ -26,9 +26,6 @@ resource "aws_instance" "web" {
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.pub.id
 
-  tags = {
-    Name = "HelloWorld"
-  }
 }
 
 
