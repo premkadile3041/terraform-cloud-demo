@@ -24,7 +24,7 @@ resource "aws_subnet" "pub" {
 resource "aws_instance" "web" {
   ami           = "ami-0d6621c01e8c2de2c"
   instance_type = "t2.micro"
-  subnet_id     = aws_subnet.main.id
+  subnet_id     = aws_subnet.pub.id
 
   tags = {
     Name = "HelloWorld"
