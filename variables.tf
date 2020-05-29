@@ -1,9 +1,3 @@
-variable "region" {
-  type    = string
-  default = "us-west-1"
-}
-
-
 variable "ami_id" {
   type    = string
   default = "ami-0b91a410940e82c54"
