@@ -17,8 +17,8 @@ resource "aws_subnet" "pub" {
 }
 
 resource "aws_instance" "web" {
-  ami           = "ami-0d6621c01e8c2de2c"
-  instance_type = "t2.micro"
+  ami           = "var.ami_id"
+  instance_type = "var.instance_type"
   subnet_id     = aws_subnet.pub.id
 
 }
